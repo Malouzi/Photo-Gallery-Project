@@ -26,16 +26,6 @@
     
 }
 
-/*.photo-card {
-    width: 24%;
-    position: relative;
-    height: 15rem;
-    overflow:hidden;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    object-fit: none;
-    /*flex: 1;   
-}*/
 
 .photo-card {
     width: calc(33.33% - 20px); 
@@ -84,26 +74,10 @@
     
 }
 
-
-/*.photo-card-img {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-   transition: transform 0.5s;
-   
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-
-}*/
-
 .photo-card-img {
     height: 100%;
-    width: 100%; /* Bildgröße 100% der Karte */
-    object-fit: cover; /* Bild an Kartenabmessungen anpassen */
+    width: 100%; 
+    object-fit: cover; 
     transition: transform 0.5s;
 }
 
@@ -132,6 +106,14 @@
 @media only screen and (max-width: 480px) {
     .photo-card {
         width: calc(100% - 20px); /* Auf noch kleineren Bildschirmen eine Karte pro Reihe */
+    }
+
+    .photo-card-heading {
+        transform: none;
+    }
+
+    .photo-card:hover {
+        transform: none;
     }
 }
 
