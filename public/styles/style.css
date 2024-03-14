@@ -26,14 +26,28 @@
     
 }
 
-.photo-card {
+/*.photo-card {
     width: 24%;
     position: relative;
     height: 15rem;
     overflow:hidden;
     margin-bottom: 10px;
     margin-right: 10px;
-    
+    object-fit: none;
+    /*flex: 1;   
+}*/
+
+.photo-card {
+    width: calc(33.33% - 20px); 
+    margin-right: 20px; 
+    margin-bottom: 20px;
+    position: relative;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.photo-card:hover {
+   /* flex: 10;*/
 }
 
 .photo-card-heading {
@@ -71,31 +85,54 @@
 }
 
 
-
-.photo-card-img {
+/*.photo-card-img {
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    object-fit: contain;
-    filter: brightness(80%);
+    
+   transition: transform 0.5s;
+   
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+
+}*/
+
+.photo-card-img {
+    height: 100%;
+    width: 100%; /* Bildgröße 100% der Karte */
+    object-fit: cover; /* Bild an Kartenabmessungen anpassen */
+    transition: transform 0.5s;
 }
 
-.photo-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    color: rgb(255, 255, 255);
-    padding: 3rem 1rem 0 1rem;
-
-    background-image: linear-gradient(180deg, rgba(1,1,1,0) 0%, rgba(0,0,0,0.25) 20%);
-
+.photo-card:hover {
+    transform: scale(2, 2);
+    z-index: 1000;
+    object-fit: contain;
 }
 
 .fa-clock-rotate-left {
     font-size: 30px;
     padding: 5px;
 }
+
+.photo-card:hover .photo-card-img {
+    transform: scale(1.1); /* Skalierung beim Hover */
+}
+
+/* Media Queries für mobile Geräte */
+@media only screen and (max-width: 768px) {
+    .photo-card {
+        width: calc(50% - 20px); /* Auf kleineren Bildschirmen 2 Karten pro Reihe */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .photo-card {
+        width: calc(100% - 20px); /* Auf noch kleineren Bildschirmen eine Karte pro Reihe */
+    }
+}
+
 
