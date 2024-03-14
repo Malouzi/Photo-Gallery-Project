@@ -8,7 +8,13 @@ Das Projekt zeigt eine Galerie von Dinosaurier-Fotos. Jede Karte in der Galerie 
 
 ## Vorschau
 
+- Bildschirm Ansicht der Seite:
+
 ![Screenshot der Foto-Galerie](./public/images/Foto-Gallery.png)
+
+- Mobile Ansicht der Seite:
+
+![Screenshot der Mobile-Ansicht](./public/images/mobile-ansicht.png)
 
 ## Funktionen
 
